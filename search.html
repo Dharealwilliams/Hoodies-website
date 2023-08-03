@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>someone</title>
+</head>
+<style>
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(226, 222, 222);
+        background-color: rgba(220, 219, 219, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+    
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        min-width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #0f0f0f;
+        display: block;
+        transition: 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .overlay {overflow-y: auto;}
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+    .hypocrite{
+        height: 80px;
+        width: 700px;
+        background: #9f9f9f;
+        border-radius: 50px;
+        border: none;
+        position: relative;
+        bottom: 20px;
+        padding-right: 20px;
+        font-size:large;
+        color: black;
+
+    }
+     .rubber{
+        display: inline-flex;
+        column-gap: 50px;
+        position: relative;
+        bottom: 150px;
+     }
+     .maradona{
+        margin-top: 50px;
+        margin-left: 10px;
+        border: none;
+        cursor: pointer;
+     }
+     .maradona :hover{
+        color: #c0bebe;
+     }
+
+     .feel{
+        position: relative;
+        bottom: 150px;
+        text-align: left;
+        margin-left: 300px;
+    }
+</style>
+<body>
+    <!--the section for the search icon and all it embodes-->
+    <div>
+        <div id="myNav" class="overlay">
+            <!--a button to close the search overlay navigation-->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!--the search overlay content-->
+            <div class="overlay-content">
+              <div class="overlay-content">
+                  <div class="rubber">
+                    <form action="#">
+                        <input type="text"placeholder="search..." name="search" class="hypocrite">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="maradona" ><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </form>
+                  </div>
+                  <div class="feel" >
+                      <h3 style="font-size: xx-large;">EXPLORE</h3>
+                  <a href="#" class="near" style="font-size: 20px;">MEN'S</a>
+                  <a href="#" class="near" style="font-size: 20px;">WOMEN'S</a>
+                  <a href="#" class="near"  style="font-size: 20px;">ACCESSORIES</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!--use any element to show/open the search overlay navigation -->
+          <span style="cursor:pointer" onclick="openNav()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.height = "70%";
+            }
+            
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+            </script>
+     </div>
+     
+     <!--the free icon that's the user's i embodies the user's profile-->
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="user" style="margin-right: 30px;">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+    </svg> 
+</body>
+</html>

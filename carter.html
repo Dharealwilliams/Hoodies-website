@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .underlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(193, 191, 191, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    
+    .underlay-content {
+    
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .underlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 66px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .underlay a:hover, .underlay a:focus {
+        color: #f1f1f1;
+    }
+    
+    .underlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+</style>
+<body>
+    <div id="undermyNav" class="underlay">
+        <a href="javascript:void(0)" class="underclosebtn" onclick="closeNav()">&times;</a>
+        <div class="underoverlay-content">
+          <h1 style="margin-left: 50px; margin-top:100px;">Cart</h1>
+          <p style="margin-left: 50px; margin-top:px;">0 items</p>
+          <div >
+              <a href="#" class="explore" style="font-size: large;margin-left:50px;border:none;border-radius: 20px;background-color:black; width: 300px; height:35px;text-align:center;padding-top:20px;">Explore Men</a><br>
+              <br>
+              <a href="#" class="explore" style="font-size: large;margin-left:50px;border:none;border-radius: 20px;background-color:black;width: 300px; height:35px;text-align:center;padding-top:20px;">Explore Women</a>
+          </div>
+        </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="Icart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+    </span>
+      
+      <script>
+      function openNav() {
+          document.getElementById("undermyNav").style.width = "30%";
+      }
+      
+      function closeNav() {
+          document.getElementById("undermyNav").style.width = "0%";
+      }
+      </script>
+    
+</body>
+</html>
